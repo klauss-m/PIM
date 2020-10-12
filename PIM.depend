@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1602461767 source:e:\unip\analise desenvolvimento de dados\2 semestre\pim\pim\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<locale.h>
+	<windows.h>
+	<Winuser.h>
+	<time.h>
+
+1602461687 source:e:\unip\analise desenvolvimento de dados\2 semestre\pim\pim\menu.c
+
+1602461730 source:e:\unip\analise desenvolvimento de dados\2 semestre\pim\pim\ux.c
+	<time.h>
+
+1602461823 source:d:\projeto\unip\pim\menu.c
+
+1602461730 source:d:\projeto\unip\pim\ux.c
+	<time.h>
+
