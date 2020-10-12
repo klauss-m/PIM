@@ -5,11 +5,15 @@ void footer(){
 
     headerLine();
 
-    getch();
+
+}
+
+void cls(){
+    system("cls");
 }
 
 void cabecalho(){
-    system("cls");
+    cls();
     time_t t = time(NULL);
     struct tm tm = *localtime(&t);
 

@@ -10,7 +10,7 @@
 #define STYLE_NO_UNDERLINE "\033[24m"
 #define STYLE_BOLD         "\033[1m"
 #define STYLE_NO_BOLD      "\033[22m"
-
+#define _WIN32_WINNT 0x0500
 HANDLE wHnd;    // Handle to write to the console.
 HANDLE rHnd;    // Handle to read from the console.
 
@@ -21,10 +21,16 @@ struct SMALL_RECT
     SHORT Right;
     SHORT Bottom;
 };
+
 int menuEscolhido;
 int userCredencial;
+
 void main()
 {
+
+    HWND consoleWindow = GetConsoleWindow();
+    SetWindowLong(consoleWindow, GWL_STYLE, GetWindowLong(consoleWindow, GWL_STYLE) & ~WS_MAXIMIZEBOX & ~WS_SIZEBOX);
+
     /*keybd_event ( VK_MENU, 0x36, 0, 0 );;
     keybd_event ( VK_RETURN, 0x1C, 0, 0 );
     keybd_event ( VK_RETURN, 0x1C, KEYEVENTF_KEYUP, 0 );
@@ -41,24 +47,20 @@ void main()
     int opcao;
     int resolucao = 120;
 
-
     system("cls");
     system("COLOR 07");
 
     printf(STYLE_BOLD);
-    cabecalho();
 
+    cabecalho();
     menuRoot();
 
-
-    footer();
 }
-
 
 
 void menuAgendamento(){
     cabecalho();
-    menuRoot();
+    menuLogin();
 }
 
 void menuPaciente(){
@@ -76,10 +78,7 @@ void menuAdministrativo(){
     menuRoot();
 }
 
-void menuControle(){
-    cabecalho();
-    menuRoot();
-}
+
 
 void menuLogin()
 {

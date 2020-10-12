@@ -1,15 +1,39 @@
 int menuEscolhido;
-
+char **usuarioAcesso;
 void menuRoot(){
-    printf("\t\t\t\t\t\t    1 - AGENDAMENTO\n");
-    printf("\t\t\t\t\t\t    2 - PACIENTES\n");
-    printf("\t\t\t\t\t\t    3 - MEDICOS\n");
-    printf("\t\t\t\t\t\t    4 - ADMINISTRATIVO\n");
-    printf("\t\t\t\t\t\t    5 - CONTROLE\n");
+
+    usuarioAcesso =  verificarUsuario();
+
+    while(!usuarioAcesso[1]){
+
+        cabecalho();
+        printf("%", center_print("Credencial Invalida",120));
+        printf("\n");
+        usuarioAcesso =  verificarUsuario();
+
+    }
+
+    printf("Bem vindo %s\n\n", usuarioAcesso[1]);
+
+    if (atoi(usuarioAcesso[3]) != 5)
+        printf("\t\t\t\t\t\t    1 - AGENDAMENTO\n");
+
+    if (atoi(usuarioAcesso[4]) != 5)
+        printf("\t\t\t\t\t\t    2 - PACIENTES\n");
+
+    if (atoi(usuarioAcesso[5]) != 5)
+        printf("\t\t\t\t\t\t    3 - MEDICOS\n");
+
+    if (atoi(usuarioAcesso[6]) != 5)
+        printf("\t\t\t\t\t\t    4 - ADMINISTRATIVO\n");
+
+    if (atoi(usuarioAcesso[7]) != 5)
+        printf("\t\t\t\t\t\t    5 - CONTROLE\n");
+
     printf("\n\n\n\n");
-    printf("%", center_print("Status: Digite uma opcao desejada",120));
-    scanf ("%d", &menuEscolhido);
-    menu(menuEscolhido);
+    //scanf ("%d", &menuEscolhido);
+    //menu(menuEscolhido);
+
 }
 
 void menu(menuEscolhido)
