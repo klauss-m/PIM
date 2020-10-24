@@ -1,5 +1,6 @@
 int menuEscolhido;
 char **usuarioAcesso;
+
 void menuRoot(){
 
     usuarioAcesso =  verificarUsuario();
@@ -31,8 +32,8 @@ void menuRoot(){
         printf("\t\t\t\t\t\t    5 - CONTROLE\n");
 
     printf("\n\n\n\n");
-    //scanf ("%d", &menuEscolhido);
-    //menu(menuEscolhido);
+    scanf ("%d", &menuEscolhido);
+    menu(menuEscolhido);
 
 }
 

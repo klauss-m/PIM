@@ -57,17 +57,6 @@ void main()
 
 }
 
-
-void menuAgendamento(){
-    cabecalho();
-    menuLogin();
-}
-
-void menuPaciente(){
-    cabecalho();
-    menuRoot();
-}
-
 void menuMedicos(){
     cabecalho();
     menuRoot();

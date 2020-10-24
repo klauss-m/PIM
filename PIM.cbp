@@ -31,6 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="agendamento.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="autenticacao.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="controle.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -38,6 +44,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pacientes.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="usuarios.c">

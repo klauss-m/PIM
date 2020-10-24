@@ -3,8 +3,8 @@
 #include <stdbool.h>
 #include <unistd.h>
 
-const char * str = "users.txt";
-char* usuarioAcesso[10] = {""};
+const char * str = "bd/users.txt";
+char* usuarioAcesso[10] = {"*"};
 
 void verificarArquivo() {
 
@@ -15,7 +15,7 @@ void verificarArquivo() {
   arquivoTXT = fopen(str, "r");
 
   if (arquivoTXT == NULL) {
-    arquivoTXT = fopen("users.txt", "w+");
+    arquivoTXT = fopen("bd/users.txt", "w+");
   }
 
   //Precisa apagar e trocar apenas a primeira linha do arquivo e ajustar a hora
@@ -37,7 +37,7 @@ char** verificarUsuario(void){
   bool usuarioAceito;
   int controleLinhaUsuario = 0;
 
-  FILE * arquivoTXT = fopen("users.txt", "rt");
+  FILE * arquivoTXT = fopen("bd/users.txt", "rt");
 
   printf("%", center_print("Entre com sua credencial",120));
   scanf("%s", &senha);
@@ -67,7 +67,7 @@ char** verificarUsuario(void){
   fclose(arquivoTXT);
 
   if (usuarioAceito) {
-    arquivoTXT = fopen("users.txt", "r");
+    arquivoTXT = fopen("bd/users.txt", "r");
     char linhaUsuario[1024];
 
     int controleLinhaArquivo = 0;
